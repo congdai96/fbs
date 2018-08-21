@@ -1,4 +1,4 @@
-package com.atom.fbs;
+package com.atom.fbs.controller;
 
 import java.util.List;
 
