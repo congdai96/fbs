@@ -1,6 +1,7 @@
-package com.atom.fbs.controller;
+package com.atom.fbs;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -70,6 +71,13 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("product-details");
 		Product product = productDAO.findById(id);
 		mv.addObject("product", product);
+		return mv;
+	}
+	
+	@RequestMapping(value="/login")
+	public ModelAndView login()	 {
+		ModelAndView mv= new ModelAndView("login");
+		mv.addObject("title", "Login");
 		return mv;
 	}
 

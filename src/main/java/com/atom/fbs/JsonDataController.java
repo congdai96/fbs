@@ -1,6 +1,7 @@
-package com.atom.fbs.controller;
+package com.atom.fbs;
 
 import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

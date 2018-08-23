@@ -1,6 +1,8 @@
 package com.atom.fbs.services.impl;
 
 import org.apache.log4j.Logger;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,12 +20,34 @@ public class UserServiceImpl implements UserService {
 	private UserDAO userDAO;
 
 	@Override
-	public User createUser(User user) {
-		logger.info("User Service - start create method");
+	public User getByEmail(String email) {
+		String selectQuery = "FROM User WHERE email = :email";
 		try {
-			return userDAO.addUser(user);
-		} catch (Exception e) {
-			logger.error("create User:", e);
+		return userDAO.getByEmail(email);
+		}
+		catch(Exception e) {
+			throw e;
+		}
+							
+	}
+	
+	@Override
+	public User get(int id) {
+		try {			
+			return userDAO.get(id);	
+		}
+		catch(Exception e) {
+			throw e;
+		}
+	}
+	
+	@Override
+	public boolean add(User user) {
+		try {			
+			userDAO.add(user);
+			return true;
+		}
+		catch(Exception e) {
 			throw e;
 		}
 	}

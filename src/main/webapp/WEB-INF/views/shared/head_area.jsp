@@ -37,6 +37,8 @@
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
+                    <li id="register"><a href="${contextRoot}/fbs/register">Sign Up</a></li>
+					<li id="login"><a href="${contextRoot}/fbs/login">Login</a></li>
                     <li class="active"><a href="${contextRoot}/fbs/">Home</a></li>
                     <li><a href="${contextRoot}/fbs/shop">Shop</a></li>
                     <li><a href="${contextRoot}/fbs/cart">Cart</a></li>

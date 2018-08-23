@@ -4,6 +4,9 @@ import com.atom.fbs.dto.User;
 
 public interface UserDAO {
 
-	User addUser(User user);
+	User getByEmail(String email);
+	User get(int id);
+	
+	void add(User user);
 
 }
